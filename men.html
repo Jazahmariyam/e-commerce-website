@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Shoes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    function showNotification(message) {
+     
+      const notification = document.createElement("div");
+      notification.className = "notification";
+      notification.innerText = message;
+      
+     
+      notification.style.position = "fixed";
+      notification.style.top = "10px";
+      notification.style.right = "10px";
+      notification.style.padding = "15px";
+      notification.style.backgroundColor = "#4caf50";
+      notification.style.color = "white";
+      notification.style.borderRadius = "5px";
+      notification.style.zIndex = "1000";
+      notification.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.2)";
+      notification.style.fontSize = "16px";
+  
+      
+      document.body.appendChild(notification);
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+    }
+    function addToCart(productName, price) {
+    
+      showNotification(`${productName} has been added to your cart!`);
+    }
+  </script>
+  
+</head>
+<body>
+ 
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="home.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+      </div>
+      <h1 class="navbar-title">Shoe Store</h1>
+      <div class="navbar-right">
+        <button class="icon-button">🔍 Search</button>
+        <button class="icon-button">❤️</button>
+        <button class="icon-button">🛒</button>
+        <button class="icon-button">👤</button>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-section" style="text-align: center;">
+      <h2>Men's Collection</h2>
+      <div id="menProductList" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; justify-items: center;">
+  
+       
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men1.jpeg" alt="Men's Shoe 1" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Sporty Men's Runner</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐☆</div>
+          <p class="price" style="color: white; font-size: 16px;">$59.99</p>
+          <button onclick="addToCart('Sporty Men\'s Runner', 59.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men2.jpeg" alt="Men's Shoe 2" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Casual Men's Loafer</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+          <p class="price" style="color: white; font-size: 16px;">$39.99</p>
+          <button onclick="addToCart('Casual Men\'s Loafer', 39.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+       
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men3.jpeg" alt="Men's Shoe 3" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Flip Flops</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐☆</div>
+          <p class="price" style="color: white; font-size: 16px;">$29.99</p>
+          <button onclick="addToCart('Flip Flops', 29.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+       
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men4.jpeg" alt="Men's Shoe 4" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">High Top Shoes</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+          <p class="price" style="color: white; font-size: 16px;">$49.99</p>
+          <button onclick="addToCart('High Top Shoes', 49.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+        
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men5.jpeg" alt="Men's Shoe 5" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Classic Black Shoes</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐☆</div>
+          <p class="price" style="color: white; font-size: 16px;">$54.99</p>
+          <button onclick="addToCart('Classic Black Shoes', 54.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+        
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men6.jpeg" alt="Men's Shoe 6" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Offwhite Shoes</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+          <p class="price" style="color: white; font-size: 16px;">$34.99</p>
+          <button onclick="addToCart('Offwhite Shoes', 34.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+        
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men7.jpeg" alt="Men's Shoe 7" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Red Sneakers</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐☆</div>
+          <p class="price" style="color: white; font-size: 16px;">$44.99</p>
+          <button onclick="addToCart('Red Sneakers', 44.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+        
+        <div class="product-card" style="background: #2f4f4f; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+          <img src="men8.jpeg" alt="Men's Shoe 8" style="width: 100%; height: 350px; object-fit: cover; border-radius: 5px;">
+          <h2 style="color: white; font-size: 18px; margin: 10px 0;">Blue Sneakers</h2>
+          <div style="color: #FFD700; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+          <p class="price" style="color: white; font-size: 16px;">$49.99</p>
+          <button onclick="addToCart('Blue Sneakers', 49.99)" class="add-to-cart" style="padding: 10px 20px; background-color: #4caf50; border: none; color: white; cursor: pointer; border-radius: 5px;">Add to Cart</button>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+  
+
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@shoestore.com</p>
+        <p>Phone: +91 123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shoe Store. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
